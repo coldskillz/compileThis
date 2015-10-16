@@ -95,18 +95,8 @@ int inh=0x0;
 
 int main(){
     
-    system("cls");
-    printf("\nCOMPILADOR BASICO MC68HC11\n");
-    printf("\nProfesor: M.I. Pedro Ignacio Rincon Gomez\n");
-    printf("\nGrupo: 6\n");
-    printf("\nSemestre 2011-2\n");
-    printf("\nAlumno:\n");
-    printf("\nGonzalez Gonzalez Ricardo\n");
-    printf("\nVilla Becerril Cesar Enrique\n");
-    getche();
-    main_m();
-    return 0;
-    
+   
+
 }
 
 
@@ -199,7 +189,7 @@ int ensamblador(){
                             fclose(fp2);
                             printf("Fin del codigo fuente");
                             _getch();
-                            main_m();
+                        
                         }
                         
                         else{
@@ -1981,7 +1971,7 @@ int accion_mnemonico(int c,char *ntoken){
             fclose(fp2);
             printf("Fin del codigo fuente");
             _getch();
-            main_m();
+           
             break;
             
     }
@@ -2429,53 +2419,4 @@ int rutina_org(char *ntoken){
     
 }
 
-int main_m(){
-    
-    system("cls");
-    printf("\nCOMPILADOR BASICO MC68HC11\n\n");
-    printf("\n\nSELECCIONA UNA OPCION DE LA SIGUIENTE LISTA\n");
-    printf("\n 1: Acceso al compilador");
-    printf("\n 2: Acerca de");
-    printf("\n 3: Salir");    
-    main_casos();  
-    
-}
 
-
-int main_casos(){
-    
-    int opcion;
-    
-    printf("\n\nIntroduzca la opcion deseada: ");
-    scanf("%d",&opcion);
-    switch (opcion){
-            
-        case 1:
-            ensamblador();             
-            break;    
-            
-        case 2:
-            
-            system("cls");
-            printf("\nACERCA DE: COMPILADOR BASICO MC68HC11\n");
-            printf("\nFacultad de Ingenieria, UNAM\n");
-            printf("\nDesarrollado por:\n");
-            printf("\nGonzalez Gonzalez Ricardo\n");
-            printf("\nEmail:textex@prodigy.net.mx,charactex27@gmail.com\n");
-            getche();
-            main_m();
-            break;
-            
-        case 3:
-            printf("\nSaliendo del programa - Gracias\n");
-            getche();
-            return(1);
-            break;
-        default:
-            printf("Opcion incorrecta\n");
-            getche();
-            main_m();
-            break;
-            
-    }
-}
